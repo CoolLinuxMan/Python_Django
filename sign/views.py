@@ -24,7 +24,7 @@ def login_action(request):
             return render(request, 'index.html', {'error': 'username or password error!'})
 
 #发布会管理
-@login_required
+#@login_required
 def event_manage(request):
 	#username = request.COOKIES.get('user', '') #读取浏览器cookie
 	username = request.session.get('user', '') #读取浏览器session
